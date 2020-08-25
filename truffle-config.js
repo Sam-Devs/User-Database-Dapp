@@ -17,12 +17,17 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
+// wss://ropsten.infura.io/ws/v3/aad82f08db494e5fbbe388f1bb41f89b
+require("dotenv").config();
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const infura_network = process.env.INFURA_NETWORK;
+const mnemoric = process.env.MNEMONIC;
+
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+// const fs = require("fs");
+// const private = JSON.parse(fs.readFileSync(".secrets").toString().trim());
 
 module.exports = {
   /**
@@ -36,6 +41,13 @@ module.exports = {
    */
 
   networks: {
+    ropsten: {
+      provider: () => 
+        new HDWalletProvider(
+          infura_network, 
+          mnemoric
+        ),
+    },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal

@@ -1,0 +1,32 @@
+{
+  "name": "userdb-dapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sam-Devs/User-Database-Dapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sam-Devs/User-Database-Dapp/issues"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "1.0.42",
+    "web3": "^1.2.11",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "homepage": "https://github.com/Sam-Devs/User-Database-Dapp#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
