@@ -22,6 +22,7 @@ require("dotenv").config();
 
 const infura_network = process.env.INFURA_NETWORK;
 const mnemoric = process.env.MNEMONIC;
+console.log(mnemoric);
 const networkId = process.env.NETWORK_ID;
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
